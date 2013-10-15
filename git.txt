@@ -1,0 +1,79 @@
+﻿git add .
+git stash 缓存本地所有修改,working恢复到没有改动
+git stash apply恢复被缓存本地所有修改
+
+git push -u tsuiroc master xu871024
+git pull tsuiroc master
+git remote add tsuiroc git@github.com:tsuiroc/kernel_learn
+ssh -T git@github.com  测试是否成功
+
+git tag # 在控制台打印出当前仓库的所有标签
+
+git tag -a v0.1.2 -m "发布0.1.2版本"   创建附注标签
+git tag -a v0.1.1 9fbc3d0 -m "发布0.1.2版本"   在指定版本中创建附注标签
+git show v0.1.2查看标签信息
+git checkout [tagname] 切换到标签
+git push origin v0.1.2 # 将v0.1.2标签提交到git服务器
+
+git commit --amend修改最后一次提交记录。
+
+git mv <src> <dest> 移动/更名
+git rm [--cached]　 删除，加--cached表示仅从index file中删除文件，即放弃跟踪
+
+git branch abc 创建分支
+git branch 查看分支
+
+git checkout abc 切换分支
+
+git diff：是查看working tree与index file的差别的。
+git diff --cached：是查看index file与commit的差别的。
+git diff HEAD：是查看working tree和commit的差别的。（你一定没有忘记，HEAD代表的是最近的一次commit的信息）
+
+
+git remote -v  查看远程仓库
+
+查看所有的分支
+git branch -a 
+
+git config --list 看所有用户
+git config --global core.editor vim
+git config --global merge.tool vimdiff
+git remote show 查看远程库
+
+如果要放弃本地修改后更新：
+git reset --hard
+git pull
+
+git config --global user.name "崔氏小农"
+git config --global user.email chinese_cp@126.com
+
+git 放弃工作区的修改
+git checkout filename
+
+git remote add origin /workspace/gpon_olt/kernel/
+git push origin master
+
+git clone /workspace/gpon_olt/kernel/   本地拷贝
+git clone cuipeng@172.16.153.47:/workspace/gpon_olt/kernel/   远程拷贝
+git clone liuhongwen@172.16.153.47:/workspace/gpon_olt/sdk/switch/
+git clone liuhongwen@172.16.153.47:/workspace/gpon_olt/app/
+git config -l
+ 
+查看LOG，看哪些文件被修改了：
+git log --stat --pretty=fuller
+只显示最近一次提交:git log -1
+版本间的内容差异   git log -p -1详细
+git log  --author=haiwang   查找 haiwang 提交的 版本；
+
+配置git lg命令：
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen (%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+git config --global alias.st "status"
+git config --global alias.ci "commit"
+git config --global alias.di "diff"
+git config --global alias.b "branch"
+git config --global alias.co "checkout"
+git config --global color.diff auto  
+git config --global color.status auto  
+git config --global color.branch auto
+
+
