@@ -4,7 +4,7 @@
 3.指定origin和branch   git config branch.master.remote origin  
                        git config branch.master.merge refs/heads/master
 4.git pull
-5.git push origin master
+5.git push
 ******github*******
 ﻿
 git add .
